@@ -1,5 +1,7 @@
 # podcatch
+
 Goals:
+
 - user can add any podcast RSS feed URLs to the app, including with auth
 - user can listen to podcasts from added feeds in the app
 - user can easily build playlists or queues of content they've added

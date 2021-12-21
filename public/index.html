@@ -16,14 +16,28 @@
   <body>
     <h1>podcatch</h1>
     <main>
-      <p>
-        featuring:
-        <ul>
-          <li><code>Node.js <span id="node-version"></span></code></li>
-          <li><code>Chromium <span id="chrome-version"></span></code></li>
-          <li><code>Electron <span id="electron-version"></span></code></li>
-        </ul>
-      </p>
+      <section>
+        <p>
+          featuring:
+          <ul>
+            <li><code>Node.js <span id="node-version"></span></code></li>
+            <li><code>Chromium <span id="chrome-version"></span></code></li>
+            <li><code>Electron <span id="electron-version"></span></code></li>
+          </ul>
+        </p>
+      </section>
+      <hr />
+      <section>
+        <form id="new-feed-form">
+          <input type="url" placeholder="https://some-podcast-feed..." id="new-feed-input" />
+          <button id="new-feed-button">add feed</button>
+        </form>
+      </section>
+      <hr />
+      <section>
+        <ul id="feed-list"></ul>
+      </section>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
