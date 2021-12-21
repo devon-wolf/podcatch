@@ -1,0 +1,34 @@
+{
+  "name": "electron-ts-test",
+  "version": "1.0.0",
+  "description": "setup of demo electron app with typescript",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "tsc && electron .",
+    "format": "prettier --write .",
+    "test": "jest --verbose --runInBand --testLocationInResults --detectOpenHandles",
+    "test:watch": "jest --watch --verbose --runInBand --testLocationInResults --detectOpenHandles"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "author": "devon-wolf",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "electron": "^16.0.5",
+    "eslint": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^27.4.5",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
+  }
+}
