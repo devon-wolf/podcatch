@@ -1,7 +1,7 @@
 {
-  "name": "electron-ts-test",
+  "name": "podcatch",
   "version": "1.0.0",
-  "description": "setup of demo electron app with typescript",
+  "description": "electron podcast feeder",
   "main": "dist/main.js",
   "scripts": {
     "start": "tsc && electron .",
