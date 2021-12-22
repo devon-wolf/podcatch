@@ -11,7 +11,11 @@ body {
 }
 
 body {
-  background-color: ivory;
+  background-color: darkslategray;
+}
+
+header {
+  color: lightsalmon;
 }
 
 body,
@@ -19,7 +23,15 @@ button {
   font-family: monospace;
 }
 
+label {
+  font-weight: bold;
+}
+
 section {
+  background-color: ivory;
+  border-radius: 10px;
+  box-shadow: lightsalmon 0 3px;
+  padding: 1rem;
   margin: 1rem;
 }
 
