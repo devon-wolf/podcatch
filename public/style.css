@@ -11,9 +11,29 @@ body {
 }
 
 body {
-  background-color: azure;
+  background-color: ivory;
+}
+
+body,
+button {
   font-family: monospace;
+}
+
+section {
+  margin: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex-center-column {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.flex-wide {
+  display: flex;
+  justify-content: space-between;
 }

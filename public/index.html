@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="./style.css" />
     <title>podcatch</title>
   </head>
-  <body>
-    <h1>podcatch</h1>
-    <main>
-      <section>
+  <body class="flex-center-column">
+    <header class="flex-center-column">
+      <h1>podcatch</h1>
+      <!-- <section>
         <p>
           featuring:
           <ul>
@@ -25,17 +25,46 @@
             <li><code>Electron <span id="electron-version"></span></code></li>
           </ul>
         </p>
-      </section>
-      <hr />
+      </section> -->
+    </header>
+    <hr />
+
+    <main>
       <section>
-        <form id="new-feed-form">
-          <input type="url" placeholder="https://some-podcast-feed..." id="new-feed-input" />
+        <label>add a feed:</label>
+        <form id="new-feed-form" class="flex-wide">
+          <input
+            type="url"
+            placeholder="https://some-podcast-feed..."
+            id="new-feed-input"
+          />
           <button id="new-feed-button">add feed</button>
         </form>
       </section>
       <hr />
+
       <section>
+        <label>your feeds:</label>
         <ul id="feed-list"></ul>
+      </section>
+      <hr />
+
+      <section>
+        <label>now playing:</label>
+        <figure>
+          <figcaption id="now-playing-name">nothing playing</figcaption>
+          <audio controls src="#">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+        </figure>
+      </section>
+      <hr />
+
+      <section>
+        <label>queued:</label>
+        <ul id="queue">
+          <li>nothing in the queue</li>
+        </ul>
       </section>
     </main>
     <script src="./app.js"></script>

@@ -1,10 +1,20 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const replaceText = (selector: string, text: string) => {
-    const element = document.getElementById(selector);
-    if (element) element.innerText = text;
-  };
+import { addLocalFeed } from './utils/localStorageUtils';
+import { addNewFeedItem, renderFeedFromStorage } from './utils/renderUtils';
 
-  for (const dependency of ['chrome', 'node', 'electron']) {
-    replaceText(`${dependency}-version`, process.versions[dependency] || '');
-  }
+window.addEventListener('DOMContentLoaded', () => {
+  const feedList = document.getElementById('feed-list') as HTMLUListElement;
+  const newFeedForm = document.getElementById(
+    'new-feed-form'
+  ) as HTMLFormElement;
+  const newFeedInput = document.getElementById(
+    'new-feed-input'
+  ) as HTMLInputElement;
+
+  renderFeedFromStorage(feedList);
+  newFeedForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addLocalFeed(newFeedInput.value);
+    addNewFeedItem(newFeedInput.value, feedList);
+    newFeedInput.value = '';
+  });
 });
