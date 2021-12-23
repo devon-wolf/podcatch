@@ -14,8 +14,24 @@
     <title>podcatch</title>
   </head>
   <body class="flex-center-column">
-    <header class="flex-center-column">
-      <h1>podcatch</h1>
+    <header class="flex-wide">
+      <div>
+        <h1>podcatch</h1>
+        <nav>
+          <a href="#">feeds</a>
+          <a href="#">library</a>
+          <a href="#">queue</a>
+        </nav>
+      </div>
+      <div>
+        <label>now playing:</label>
+        <figure>
+          <audio controls src="#">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+          <figcaption id="now-playing-name">nothing playing</figcaption>
+        </figure>
+      </div>
     </header>
 
     <main>
@@ -34,22 +50,20 @@
       <section>
         <label>your feeds:</label>
         <ul id="feed-list"></ul>
-      </section>
-
-      <section>
-        <label>now playing:</label>
-        <figure>
-          <figcaption id="now-playing-name">nothing playing</figcaption>
-          <audio controls src="#">
-            Your browser does not support the <code>audio</code> element.
-          </audio>
-        </figure>
+        <a href="./pages/feed-list-page.html">test link</a>
       </section>
 
       <section>
         <label>queued:</label>
         <ul id="queue">
           <li>nothing in the queue</li>
+        </ul>
+      </section>
+
+      <section>
+        <label>your library:</label>
+        <ul id="library-list">
+          <li>nothing in your library</li>
         </ul>
       </section>
     </main>

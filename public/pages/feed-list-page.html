@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <title>podcatch</title>
+  </head>
+  <body class="flex-center-column">
+    <header class="flex-center-column">
+      <h1 id="feed-title"></h1>
+      <a href="../index.html">back to home</a>
+    </header>
+    <section>
+        <label>in this feed:</label>
+        <ul id="feed-contents"></ul>
+    </section>
+    <script src="./feedList.js"></script>
+  </body>
+</html>

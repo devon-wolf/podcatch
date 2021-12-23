@@ -16,6 +16,12 @@ body {
 
 header {
   color: lightsalmon;
+  padding: 1rem;
+  width: 100%;
+}
+
+header a:link, header a:visited {
+  color: ivory;
 }
 
 body,
@@ -33,6 +39,7 @@ section {
   box-shadow: lightsalmon 0 3px;
   padding: 1rem;
   margin: 1rem;
+  min-width: 70vw;
 }
 
 ul {
